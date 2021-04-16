@@ -1,0 +1,58 @@
+//procedure dot_product
+PROCEDURE dot_product(var ps: INTEGER, vect_A,vect_B : array_name : ARRAY_OF INTEGER[length];)
+VAR
+  i:INTEGER;
+  ps:=0;
+BEGIN
+    FOR i FROM 0 TO vect_A.length-1 STEP 1  DO
+        ps:= ps + vect_A[i]*vect_B[i];
+
+    END_FOR
+    write(ps)
+END
+//algorithme
+VAR
+vect_A,vect_B : ARRAY_OF_INTEGER(30);
+i:INTEGER;
+j: INTEGER;
+BEGIN
+FOR i FROM O TO vect_A.length STEP 1 DO
+FOR j FROM O TO vect_B.length STEP 1 DO
+dot_product(vect_A,vect_B,ps);
+IF (dot_product(vect_A[i],vect_B[j])=0) THEN
+    write("two vectors are orthogonal");
+END_IF
+END_FOR
+END_FOR
+END
+
+//function dot-product
+function dot_product (VAR ps:INTEGER, vect_A, vect_B:ARRAY_OF_INTEGER)
+VAR
+  i:INTEGER;
+  ps:=0;
+BEGIN
+    FOR i FROM 0 TO vect_A.length-1 STEP 1  DO
+        ps:= ps + vect_A[i]*vect_B[i];
+
+    END_FOR
+    write(ps)
+END_FUNCTION
+// ALGORITHM
+VAR
+vect_A,vect_B : ARRAY_OF_INTEGER(30);
+i:INTEGER;
+j: INTEGER;
+BEGIN
+FOR i FROM O TO vect_A.length STEP 1 DO
+FOR j FROM O TO vect_B.length STEP 1 DO
+ps:= dot_product(ps, vect_A, vect_B),
+IF(ps=0) THEN
+    write("two vectors are orthogonal");
+    ELSE
+ write("two vectors are not orthogonal");
+    END_IF
+END_IF
+END_FOR
+END_FOR
+END
